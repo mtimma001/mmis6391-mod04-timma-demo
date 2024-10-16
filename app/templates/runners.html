@@ -1,22 +1,22 @@
 {% extends "base.html" %}
 
+{% block title %}Runners{% endblock %}
+
 {% block content %}
 
 <div class="container mt-5">
     <h1 class="text-center mb-4">Runners</h1>
 
     <!-- Form to add a new runner -->
-    <form method="POST" action="{{ url_for('runners.runner') }}" class="mb-4">
-        <div class="form-row">
-            <div class="col">
-                <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" name="last_name" placeholder="Last Name" required>
-            </div>
-            <div class="col">
-                <button type="submit" class="btn btn-primary">Add Runner</button>
-            </div>
+    <form method="POST" action="{{ url_for('runners.runner') }}" class="row g-3 align-items-center mb-4">
+        <div class="col-auto">
+            <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
+        </div>
+        <div class="col-auto">
+            <input type="text" class="form-control" name="last_name" placeholder="Last Name" required>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Add Runner</button>
         </div>
     </form>
 
